@@ -28,11 +28,25 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }
+.main-btn {
+  animation: grow-and-shrink 4000ms;
+  animation-iteration-count: 3;
+  background-color: #8EC3B0;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  padding: 20px;
+}
+
+
