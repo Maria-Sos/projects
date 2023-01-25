@@ -2,7 +2,6 @@ import './App.css';
 import AllRouters from "./routers/AllRouters";
 
 function App() {
-
   return (
 	<div>
 	  <div className="App">
