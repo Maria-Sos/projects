@@ -1,81 +1,36 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import {Link} from "react-router-dom";
-import {Divider} from "@mui/material";
-
 
 export default function BasicMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-	setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-	setAnchorEl(null);
-  };
   const linkStyle = {
 	textDecoration: "none",
-	color: 'black'
-  }
-  const headingStyle = {
-	marginLeft: "10px",
-	color: 'darkblue'
+	color: 'white'
   }
 
-  const btnStyle = {
-	color: 'white'
+  const dropDownStyle = {
+	backgroundColor: '#fcca00',
+	borderColor: 'white',
   }
 
   return (
 	<div>
-	  <Button
-		variant="outlined"
-		style={btnStyle}
-		id="basic-button"
-		aria-controls={open ? 'basic-menu' : undefined}
-		aria-haspopup="true"
-		aria-expanded={open ? 'true' : undefined}
-		onClick={handleClick}
-	  >
-		Click on ME!
-	  </Button>
-	  <Menu
-		id="basic-menu"
-		anchorEl={anchorEl}
-		open={open}
-		onClose={handleClose}
-		MenuListProps={{
-		  'aria-labelledby': 'basic-button',
-		}}
-	  >
-		<h3 style={headingStyle}>React projects</h3>
-		<MenuItem onClick={handleClose}>
-		  <Link style={linkStyle} to="/">Home</Link>
-		</MenuItem>
-		<MenuItem onClick={handleClose}>
-		  <Link style={linkStyle} to="/memory-game">Memory Game</Link>
-		</MenuItem>
-		<Divider />
-		<h3 style={headingStyle}>HTML/CSS projects</h3>
-		<MenuItem onClick={handleClose}>
-		  <a href="https://unique-alluring-shovel.glitch.me" style={linkStyle} target="_blank" rel="noopener noreferrer">Bakery web page</a>
-		  {/*<Link style={linkStyle} hrefLang="https://unique-alluring-shovel.glitch.me">Bakery web page</Link>*/}
-		</MenuItem>
-		<MenuItem onClick={handleClose}>
-		  <a href="https://sun-befitting-musician.glitch.me" style={linkStyle} target="_blank" rel="noopener noreferrer">Advocate web page</a>
-		</MenuItem>
-		<MenuItem onClick={handleClose}>
-		  <a href="https://weak-trail-pyjama.glitch.me" style={linkStyle} target="_blank" rel="noopener noreferrer">My favorite movies (example)</a>
-		</MenuItem>
-		{/*<MenuItem onClick={handleClose}>*/}
-		{/*  <Link style={linkStyle} to="/kanban">Kanban board</Link>*/}
-		{/*</MenuItem>*/}
-		{/*<MenuItem onClick={handleClose}>*/}
-		{/*  <Link style={linkStyle} to="/tic-tac-toe">Tic Tac Toe</Link>*/}
-		{/*</MenuItem>*/}
-	  </Menu>
+	  <div className="dropdown dropend">
+		<button className="btn-menu btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+				aria-expanded="false">
+		  Click on ME!
+		</button>
+		<ul className="dropdown-menu" style={dropDownStyle}>
+		  <li><h5 className="dropdown-header">HTML/CSS projects</h5></li>
+		  <li><a className="dropdown-item" href="https://unique-alluring-shovel.glitch.me" style={linkStyle} target="_blank">Bakery web page</a></li>
+		  <li><a className="dropdown-item"  href="https://sun-befitting-musician.glitch.me" style={linkStyle} target="_blank">Advocate web page</a></li>
+		  <li><a className="dropdown-item" href="https://weak-trail-pyjama.glitch.me" style={linkStyle} target="_blank">My favorite movies (example)</a></li>
+		  <li><hr className="dropdown-divider"/></li>
+		  <li><h5 className="dropdown-header">React projects</h5></li>
+		  <li><Link className="dropdown-item" to="/memory-game" style={linkStyle}>Memory Game</Link></li>
+		  <li><Link className="dropdown-item disabled" to="" style={linkStyle}>Kanban board</Link></li>
+		  <li><Link className="dropdown-item disabled" to="" style={linkStyle}>...</Link></li>
+		</ul>
+	  </div>
 	</div>
   );
 }

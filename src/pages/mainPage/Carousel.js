@@ -1,6 +1,9 @@
 import React from 'react';
 import BasicMenu from "./BasicMenu";
 
+// const mainTextStyle = {
+//   marginTop: '20%'
+// }
 const Carousel = () => {
   return (
 	<div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false">
@@ -14,26 +17,24 @@ const Carousel = () => {
 	  </div>
 	  <div className="carousel-inner">
 		<div className="carousel-item active position-relative">
-		  {/*<img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" className="d-block w-100" alt="..."/>*/}
-
 		  <img src="https://images.unsplash.com/photo-1436262513933-a0b06755c784?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80" className="d-block w-100" alt="..."/>
-			<div className="carousel-caption d-none d-md-block position-absolute top-50 end-50">
-			  <h3>Welcome to my project's list</h3>
-			  <p>Here is some small part of that I can.</p>
+			<div className="one carousel-caption d-block position-absolute top-0 end-50">
+			  <h3 className="text">Welcome to my project's list</h3>
+			  <p className="d-none d-sm-block">Here is some small part of that I can.</p>
 			  <BasicMenu/>
 			</div>
 		</div>
 		<div className="carousel-item position-relative">
 		  <img src="https://images.unsplash.com/photo-1525972385596-02ad3049150b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80" className="d-block w-100" alt="..."/>
-			<div className="carousel-caption d-none d-md-block position-absolute top-10 start-60">
-			  <h3>I like to improve my knowledge</h3>
+			<div className="carousel-caption d-block position-absolute top-10 start-60">
+			  <h3 className="text">I like to improve my knowledge</h3>
 			</div>
 		</div>
 		<div className="carousel-item position-relative">
 		  <img src="https://images.unsplash.com/photo-1521669246297-b04a27e36f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" className="d-block w-100" alt="..."/>
-			<div className="carousel-caption d-none d-md-block position-absolute bottom-30 start-50">
-			  <h3>Let's do it together!</h3>
-			  <p>Would be glad to join your team for creating amazing app.</p>
+			<div className="carousel-caption d-block position-absolute bottom-30 start-50">
+			  <h3 className="text">Let's do it together!</h3>
+			  <p className="d-none d-sm-block">Would be glad to join your team for creating amazing app.</p>
 			</div>
 		</div>
 	  </div>

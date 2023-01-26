@@ -39,6 +39,7 @@
     transform: scale(1);
   }
 }
+
 .main-btn {
   animation: grow-and-shrink 4000ms;
   animation-iteration-count: 3;
@@ -52,4 +53,37 @@
 body {
   background-color: #DEF5E5;
 }
+
+@media all and (max-width: 800px) {
+  .text {
+    font-size: 15px;
+  }
+  .btn-menu {
+    width: 90%;
+    font-size: 12px;
+  }
+  .one {
+    margin-top: 0px;
+  }
+  .dropdown-menu {
+    font-size: 10px;
+  }
+}
+
+.one {
+  margin-top: 20%;
+}
+  .main-footer {
+    margin-top: 20px;
+  }
+
+  .btn-menu:hover {
+    color: white;
+    background-color: #00b1e6
+  }
+
+  .dropdown-item:hover {
+    color: white;
+    background-color: #00b1e6
+  }
 

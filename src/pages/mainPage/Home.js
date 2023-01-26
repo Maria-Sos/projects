@@ -7,7 +7,7 @@ const Home = () => {
   return (
 	<div >
 	  <Carousel/>
-	  <footer>
+	  <footer style={{marginTop: '20px'}}>
 		<Box sx={{ width: 'auto' }}>
 		  <Grid container justifyContent="center">
 			<p align="left">
