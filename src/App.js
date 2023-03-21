@@ -1,11 +1,12 @@
 import './App.css';
-import AllRouters from "./routers/AllRouters";
+import BasicMenu from "./pages/mainPage/BasicMenu";
+import Home from "./pages/mainPage/Home";
 
 function App() {
   return (
 	<div>
 	  <div className="App">
-		<AllRouters/>
+		<Home/>
 	  </div>
 	</div>
   )
