@@ -17,7 +17,7 @@ export default function BasicMenu() {
 	  <div className="dropdown dropend">
 		<button className="btn-menu btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
 				aria-expanded="false">
-		  Click on ME!
+		  See Links
 		</button>
 		<ul className="dropdown-menu" style={dropDownStyle}>
 		  <li><h5 className="dropdown-header">HTML/CSS projects</h5></li>
@@ -26,6 +26,8 @@ export default function BasicMenu() {
 		  <li><h5 className="dropdown-header">JS Vanilla</h5></li>
 		  <li><a className="dropdown-item"  href="https://to-do-vanilla.glitch.me" style={linkStyle} target="_blank">To Do List</a></li>
 		  <li><a className="dropdown-item"  href="https://create-your-menu.glitch.me/" style={linkStyle} target="_blank">Order your menu</a></li>
+		  <li><a className="dropdown-item"  href="https://my-childhood-hobbies.glitch.me/" style={linkStyle} target="_blank">My hobbies from childhood</a></li>
+
 		  <li><hr className="dropdown-divider"/></li>
 		  <li><h5 className="dropdown-header">React projects</h5></li>
 		  <li><a className="dropdown-item" href="https://g-memory.netlify.app/" style={linkStyle}>Memory Game</a></li>
